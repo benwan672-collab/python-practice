@@ -1,0 +1,14 @@
+# 虛擬環境
+venv/
+__pycache__/
+*.pyc
+
+# 報表檔案（我們最重要要忽略的）
+reports/
+*.xlsx
+*.png
+
+# 其他常見忽略檔案
+*.log
+.DS_Store
+Thumbs.db
