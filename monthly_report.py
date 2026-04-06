@@ -64,6 +64,31 @@ plt.grid(True)
 plt.savefig('月報趨勢圖.png')
 plt.show()
 
+# ==================== 步驟6：自動寄送月報 Email (進階功能) ====================
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
+import os
+
+def send_monthly_report_email():
+    print("📧 準備自動寄送跨部門月報給主管...")
+
+    # 這裡先用模擬方式（真實寄信需要你的 email 帳號密碼，之後再教你安全做法）
+    excel_file = f"跨部門月報_{datetime.now().strftime('%Y%m%d')}.xlsx"
+    
+    print(f"✅ 月報已準備完成：{excel_file}")
+    print("📨 模擬寄送給：")
+    print("   - 業務主管 (sales@company.com)")
+    print("   - 行銷主管 (marketing@company.com)")
+    print("   - 財務主管 (finance@company.com)")
+    print("🎉 月報自動寄送功能已執行！")
+
+# 在程式結束前呼叫這個功能
+send_monthly_report_email()
+
+
 print("✅ 趨勢圖已儲存為 月報趨勢圖.png")
 
 print("\n🎊 恭喜我的小海綿！第一個跨部門月報工具完成啦～")
